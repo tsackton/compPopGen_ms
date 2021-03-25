@@ -38,3 +38,5 @@ vcfLineCheck.sh: check that concatVCFs worked
 03_write_coverage_beds.sh: output clean coverage, high coverage, and low coverage bed files using sum_cov.awk awk script
 
 For this, I assume everything is run in a conda enviroment with all necessary binaries, as this will be the case for the eventual snakemake version.
+
+Other thoughts: this produces both a bigWig and a compressed bedGraph for everything -- do we really need both? Might make more sense to just keep the bigWigs once we have the bed intervals from the last scripts
