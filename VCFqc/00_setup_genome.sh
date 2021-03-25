@@ -5,6 +5,8 @@
 # 2) the species code
 # 3) the path to use for coverage files
 
+set -o errexit
+
 REFGENOME=$1
 SPECIES=$2
 COVPATH=$3
