@@ -18,4 +18,4 @@ BAMFILE="$BAMPATH""$INDV"
 
 bedtools genomecov -bga -ibam ${BAMFILE} -g ${COVPATH}/${SPECIES}.chrom.sizes | tee ${COVPATH}/$INDV.bg | gzip > ${COVPATH}/$INDV.bg.gz
 sort -k1,1 -k2,2n ${COVPATH}/$INDV.bg | bedGraphToBigWig - ${COVPATH}/${SPECIES}.chrom.sizes ${COVPATH}/${INDV}.bw
-rm sort -k1,1 -k2,2n ${COVPATH}/$INDV.bg
+rm ${COVPATH}/$INDV.bg

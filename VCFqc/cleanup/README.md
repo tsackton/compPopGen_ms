@@ -33,6 +33,8 @@ vcfLineCheck.sh: check that concatVCFs worked
 ### Proposed refactor ###
 
 00_setup_genome.sh: create file of chromosome sizes from a reference fasta, make genome bed
-01_genomecov.sh: create a coverage bedgraph for each bam file, sort, compress
-02_mergeBedgraphs.sh: convert bedGraphs to bigWig, merge bigWigs, convert to bigWig, make summary file, gzip merged bedGraph
-03_write_coverage_beds.sh: output clean coverage, high coverage, and low coverage bed files using sum_cov.awk awk script 
+01_genomecov.sh: create a coverage bedgraph for each bam file, sort, convert to bigWig, and compress bedGraphs
+02_mergeBedgraphs.sh: merge bigWigs, process merged bedGraph, make summary file, gzip merged bedGraph
+03_write_coverage_beds.sh: output clean coverage, high coverage, and low coverage bed files using sum_cov.awk awk script
+
+For this, I assume everything is run in a conda enviroment with all necessary binaries, as this will be the case for the eventual snakemake version.
